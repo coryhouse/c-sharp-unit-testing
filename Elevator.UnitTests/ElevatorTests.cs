@@ -27,7 +27,7 @@ namespace ElevatorProject.UnitTests
             
             // Act
             //adding users to the elevator
-            myElevator.InUser(Programmer);          
+            myElevator.AddUser(Programmer);          
             var result = myElevator.CheckMaxWeightAllowedReached();
 
             // Assert            
@@ -49,8 +49,8 @@ namespace ElevatorProject.UnitTests
 
             // Act
             //adding users to the elevator
-            myElevator.InUser(director);
-            myElevator.InUser(producer);
+            myElevator.AddUser(director);
+            myElevator.AddUser(producer);
             var result = myElevator.CheckMaxWeightAllowedReached();
 
             // Assert            
@@ -72,10 +72,10 @@ namespace ElevatorProject.UnitTests
 
             // Act
             //adding users to the elevator
-            elevator.InUser(director);
-            elevator.InUser(producer);
+            elevator.AddUser(director);
+            elevator.AddUser(producer);
             // removing one
-            elevator.OutUser(producer);
+            elevator.RemoveUser(producer);
             var result = elevator.CheckMaxWeightAllowedReached();
 
             // Assert            
@@ -83,7 +83,7 @@ namespace ElevatorProject.UnitTests
         }
 
         [TestMethod]
-        public void OutUser_SubtractingSeveralUsersWhoAreNotInTheElevator_CurrentWeightResult0()
+        public void RemoveUser_SubtractingSeveralUsersWhoAreNotInTheElevator_CurrentWeightResult0()
         {
             // Arrange
             var myElevator = new Elevator(100);
@@ -96,8 +96,8 @@ namespace ElevatorProject.UnitTests
 
             // Act
             // removing users who aren't inside the elevator
-            myElevator.OutUser(Artist);
-            myElevator.OutUser(GameDesigner);
+            myElevator.RemoveUser(Artist);
+            myElevator.RemoveUser(GameDesigner);
           
             // Assert            
             Assert.AreEqual(myElevator.CurrentWeight, 0);
@@ -115,7 +115,7 @@ namespace ElevatorProject.UnitTests
 
             // Act
             // adding user inside the elevator, and go to vip section
-            myElevator.InUser(ceo);
+            myElevator.AddUser(ceo);
             var result = myElevator.GoToVipSection(ceo);            
 
             // Assert            
@@ -126,15 +126,15 @@ namespace ElevatorProject.UnitTests
         public void GoToVipSection_UserWithoutVipPass_ReturnFalse()
         {
             // Arrange
-            var myElevator = new Elevator(100);
+            var elevator = new Elevator(100);
             // user 
             var guard = new User();
             guard.Weight = 90;            
 
             // Act
             // adding user inside the elevator, and go to vip section
-            myElevator.InUser(guard);
-            var result = myElevator.GoToVipSection(guard);
+            elevator.AddUser(guard);
+            var result = elevator.GoToVipSection(guard);
 
             // Assert            
             Assert.IsFalse(result);

@@ -18,7 +18,7 @@
         /// Add the weight of the user has entered to the elevator
         /// </summary>
         /// <param name="user"></param>
-        public void InUser(User user)
+        public void AddUser(User user)
         {
             CurrentWeight += user.Weight;            
         }
@@ -27,7 +27,7 @@
         /// Subtract the weight of the user from total current weight
         /// </summary>
         /// <param name="user"></param>
-        public void OutUser(User user)
+        public void RemoveUser(User user)
         {
             CurrentWeight -= user.Weight;            
             if (CurrentWeight < 0) CurrentWeight = 0;
@@ -47,7 +47,7 @@
         /// someone inside the elevator (Only for one user)
         /// </summary>
         /// <param name="user">User who wants to go to vip section</param>
-        /// <returns>true if can go to vip section, false instead</returns>
+        /// <returns>true if can go to vip section</returns>
         public bool GoToVipSection(User user)
         {
             return  CurrentWeight > 0 && user.IsExecutive;
