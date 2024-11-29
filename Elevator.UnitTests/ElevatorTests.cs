@@ -104,7 +104,7 @@ namespace ElevatorProject.UnitTests
         }
 
         [TestMethod]
-        public void GoToVipSection_UserWithVipPass_ReturnTrue()
+        public void CanGoToVipSection_UserWithVipPass_ReturnTrue()
         {
             // Arrange
             var myElevator = new Elevator(100);
@@ -116,14 +116,14 @@ namespace ElevatorProject.UnitTests
             // Act
             // adding user inside the elevator, and go to vip section
             myElevator.AddUser(ceo);
-            var result = myElevator.GoToVipSection(ceo);            
+            var result = myElevator.CanGoToVipSection(ceo);            
 
             // Assert            
             Assert.IsTrue(result);
         }
 
         [TestMethod]
-        public void GoToVipSection_UserWithoutVipPass_ReturnFalse()
+        public void CanGoToVipSection_UserWithoutVipPass_ReturnFalse()
         {
             // Arrange
             var elevator = new Elevator(100);
@@ -134,21 +134,21 @@ namespace ElevatorProject.UnitTests
             // Act
             // adding user inside the elevator, and go to vip section
             elevator.AddUser(guard);
-            var result = elevator.GoToVipSection(guard);
+            var result = elevator.CanGoToVipSection(guard);
 
             // Assert            
             Assert.IsFalse(result);
         }
 
         [TestMethod]
-        public void GoToVipSection_ThereAreNotUserInTheElevator_ReturnFalse()
+        public void CanGoToVipSection_ThereAreNotUserInTheElevator_ReturnFalse()
         {
             // Arrange
             var myElevator = new Elevator(100);
            
             // Act
             // go to vip section            
-            var result = myElevator.GoToVipSection(new User());
+            var result = myElevator.CanGoToVipSection(new User());
 
             // Assert            
             Assert.IsFalse(result);

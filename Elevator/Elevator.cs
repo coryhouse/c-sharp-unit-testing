@@ -48,9 +48,9 @@
         /// </summary>
         /// <param name="user">User who wants to go to vip section</param>
         /// <returns>true if can go to vip section</returns>
-        public bool GoToVipSection(User user)
+        public bool CanGoToVipSection(User user)
         {
-            return  CurrentWeight > 0 && user.IsExecutive;
+            return CurrentWeight > 0 && user.IsExecutive;
         }
     }
 
