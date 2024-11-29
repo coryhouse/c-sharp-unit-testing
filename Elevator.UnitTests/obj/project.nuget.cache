@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "tiCXY1n/9MezNnMUl7h/fzoREZdHbp9VQiW/xyBbtIrk5v9pctic5B9JW+CZli24FVKdjIlSyVZ+HiCPPBoTKw==",
+  "success": true,
+  "projectFilePath": "/Users/coryhouse/Projects/c-sharp-unit-testing/c-sharp-unit-testing/Elevator.UnitTests/Elevator.UnitTests.csproj",
+  "expectedPackageFiles": [
+    "/Users/coryhouse/.nuget/packages/coverlet.collector/6.0.0/coverlet.collector.6.0.0.nupkg.sha512",
+    "/Users/coryhouse/.nuget/packages/microsoft.codecoverage/17.8.0/microsoft.codecoverage.17.8.0.nupkg.sha512",
+    "/Users/coryhouse/.nuget/packages/microsoft.net.test.sdk/17.8.0/microsoft.net.test.sdk.17.8.0.nupkg.sha512",
+    "/Users/coryhouse/.nuget/packages/microsoft.testplatform.objectmodel/17.8.0/microsoft.testplatform.objectmodel.17.8.0.nupkg.sha512",
+    "/Users/coryhouse/.nuget/packages/microsoft.testplatform.testhost/17.8.0/microsoft.testplatform.testhost.17.8.0.nupkg.sha512",
+    "/Users/coryhouse/.nuget/packages/mstest.testadapter/3.1.1/mstest.testadapter.3.1.1.nupkg.sha512",
+    "/Users/coryhouse/.nuget/packages/mstest.testframework/3.1.1/mstest.testframework.3.1.1.nupkg.sha512",
+    "/Users/coryhouse/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
+    "/Users/coryhouse/.nuget/packages/nuget.frameworks/6.5.0/nuget.frameworks.6.5.0.nupkg.sha512",
+    "/Users/coryhouse/.nuget/packages/system.reflection.metadata/1.6.0/system.reflection.metadata.1.6.0.nupkg.sha512"
+  ],
+  "logs": []
+}

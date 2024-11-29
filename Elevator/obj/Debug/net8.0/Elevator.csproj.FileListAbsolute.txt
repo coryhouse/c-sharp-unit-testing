@@ -1,0 +1,11 @@
+/Users/coryhouse/Projects/c-sharp-unit-testing/c-sharp-unit-testing/Elevator/bin/Debug/net8.0/Elevator.deps.json
+/Users/coryhouse/Projects/c-sharp-unit-testing/c-sharp-unit-testing/Elevator/bin/Debug/net8.0/Elevator.dll
+/Users/coryhouse/Projects/c-sharp-unit-testing/c-sharp-unit-testing/Elevator/bin/Debug/net8.0/Elevator.pdb
+/Users/coryhouse/Projects/c-sharp-unit-testing/c-sharp-unit-testing/Elevator/obj/Debug/net8.0/Elevator.GeneratedMSBuildEditorConfig.editorconfig
+/Users/coryhouse/Projects/c-sharp-unit-testing/c-sharp-unit-testing/Elevator/obj/Debug/net8.0/Elevator.AssemblyInfoInputs.cache
+/Users/coryhouse/Projects/c-sharp-unit-testing/c-sharp-unit-testing/Elevator/obj/Debug/net8.0/Elevator.AssemblyInfo.cs
+/Users/coryhouse/Projects/c-sharp-unit-testing/c-sharp-unit-testing/Elevator/obj/Debug/net8.0/Elevator.csproj.CoreCompileInputs.cache
+/Users/coryhouse/Projects/c-sharp-unit-testing/c-sharp-unit-testing/Elevator/obj/Debug/net8.0/Elevator.dll
+/Users/coryhouse/Projects/c-sharp-unit-testing/c-sharp-unit-testing/Elevator/obj/Debug/net8.0/refint/Elevator.dll
+/Users/coryhouse/Projects/c-sharp-unit-testing/c-sharp-unit-testing/Elevator/obj/Debug/net8.0/Elevator.pdb
+/Users/coryhouse/Projects/c-sharp-unit-testing/c-sharp-unit-testing/Elevator/obj/Debug/net8.0/ref/Elevator.dll
