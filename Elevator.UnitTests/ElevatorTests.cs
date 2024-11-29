@@ -4,20 +4,20 @@ namespace ElevatorProject.UnitTests
     public class ElevatorTests
     {
         [TestMethod]
-        public void CheckMaxWeightAllowedReached_EmptyElevator_ReturnFalse()
+        public void IsMaxWeightAllowedReached_EmptyElevator_ReturnFalse()
         {
             // Arrange
             var myElevator = new Elevator(100);
 
             // Act
-            var result = myElevator.CheckMaxWeightAllowedReached();
+            var result = myElevator.IsMaxWeightAllowedReached();
 
             // Assert
             Assert.IsFalse(result);
         }
 
         [TestMethod]
-        public void CheckMaxWeightAllowedReached_80MaxWeightWith80WeightUser_ReturnTrue()
+        public void IsMaxWeightAllowedReached_80MaxWeightWith80WeightUser_ReturnTrue()
         {
             // Arrange
             var myElevator = new Elevator(80);
@@ -28,14 +28,14 @@ namespace ElevatorProject.UnitTests
             // Act
             //adding users to the elevator
             myElevator.AddUser(Programmer);          
-            var result = myElevator.CheckMaxWeightAllowedReached();
+            var result = myElevator.IsMaxWeightAllowedReached();
 
             // Assert            
             Assert.IsTrue(result);
         }
 
         [TestMethod]
-        public void CheckMaxWeightAllowedReached_100MaxWeightWithSeveralUsers_ReturnTrue()
+        public void IsMaxWeightAllowedReached_100MaxWeightWithSeveralUsers_ReturnTrue()
         {
             // Arrange
             var myElevator = new Elevator(100);
@@ -51,14 +51,14 @@ namespace ElevatorProject.UnitTests
             //adding users to the elevator
             myElevator.AddUser(director);
             myElevator.AddUser(producer);
-            var result = myElevator.CheckMaxWeightAllowedReached();
+            var result = myElevator.IsMaxWeightAllowedReached();
 
             // Assert            
             Assert.IsTrue(result);
         }
 
         [TestMethod]
-        public void CheckMaxWeightAllowedReached_100MaxWeightWithSeveralUsersButSubtractingOne_ReturnFalse()
+        public void IsMaxWeightAllowedReached_100MaxWeightWithSeveralUsersButSubtractingOne_ReturnFalse()
         {
             // Arrange
             var elevator = new Elevator(100);
@@ -76,31 +76,31 @@ namespace ElevatorProject.UnitTests
             elevator.AddUser(producer);
             // removing one
             elevator.RemoveUser(producer);
-            var result = elevator.CheckMaxWeightAllowedReached();
+            var result = elevator.IsMaxWeightAllowedReached();
 
             // Assert            
             Assert.IsFalse(result);
         }
 
         [TestMethod]
-        public void RemoveUser_SubtractingSeveralUsersWhoAreNotInTheElevator_CurrentWeightResult0()
+        public void RemoveUser_RemovingSeveralUsersWhoAreNotInTheElevator_CurrentWeightIs0()
         {
             // Arrange
-            var myElevator = new Elevator(100);
+            var elevator = new Elevator(100);
             // user 1
-            var Artist = new User();
-            Artist.Weight = 75;            
+            var artist = new User();
+            artist.Weight = 75;            
             // user 2
-            var GameDesigner = new User();
-            GameDesigner.Weight = 85;
+            var gameDesigner = new User();
+            gameDesigner.Weight = 85;
 
             // Act
             // removing users who aren't inside the elevator
-            myElevator.RemoveUser(Artist);
-            myElevator.RemoveUser(GameDesigner);
+            elevator.RemoveUser(artist);
+            elevator.RemoveUser(gameDesigner);
           
             // Assert            
-            Assert.AreEqual(myElevator.CurrentWeight, 0);
+            Assert.AreEqual(elevator.CurrentWeight, 0);
         }
 
         [TestMethod]
@@ -141,7 +141,7 @@ namespace ElevatorProject.UnitTests
         }
 
         [TestMethod]
-        public void CanGoToVipSection_ThereAreNotUserInTheElevator_ReturnFalse()
+        public void CanGoToVipSection_NoUsersInElevator_ReturnFalse()
         {
             // Arrange
             var myElevator = new Elevator(100);

@@ -36,8 +36,8 @@
         /// <summary>
         /// Checks if the max weight allowed in the elevator is reached
         /// </summary>
-        /// <returns>true if the elevator has reach the max weight allowed, false instead</returns>
-        public bool CheckMaxWeightAllowedReached()
+        /// <returns>true if the elevator has reached the max weight allowed</returns>
+        public bool IsMaxWeightAllowedReached()
         {
             return CurrentWeight >= MaxWeightAllowed;
         }
