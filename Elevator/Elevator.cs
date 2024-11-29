@@ -6,30 +6,30 @@
         public int CurrentWeight;        
 
         /// <summary>
-        /// Constructor: Initializes maxweight and current weight
+        /// Constructor: Initializes the elevator with the max weight allowed
         /// </summary>
-        public Elevator(int MaxHeight)
+        public Elevator(int maxWeight)
         {
-            MaxWeightAllowed = MaxHeight;
+            MaxWeightAllowed = maxWeight;
             CurrentWeight = 0;            
         }
 
         /// <summary>
         /// Add the weight of the user has entered to the elevator
         /// </summary>
-        /// <param name="User"></param>
-        public void InUser(Employee User)
+        /// <param name="user"></param>
+        public void InUser(User user)
         {
-            CurrentWeight += User.Weight;            
+            CurrentWeight += user.Weight;            
         }
 
         /// <summary>
         /// Subtract the weight of the user from total current weight
         /// </summary>
-        /// <param name="User"></param>
-        public void OutUser(Employee User)
+        /// <param name="user"></param>
+        public void OutUser(User user)
         {
-            CurrentWeight -= User.Weight;            
+            CurrentWeight -= user.Weight;            
             if (CurrentWeight < 0) CurrentWeight = 0;
         }
 
@@ -43,18 +43,18 @@
         }
 
         /// <summary>
-        /// Check if the employee has permission to vip section and there is
-        /// someone inside the elevator (Only for one employee)
+        /// Check if the user has permission to vip section and there is
+        /// someone inside the elevator (Only for one user)
         /// </summary>
-        /// <param name="User">Employee who wants to go to vip section</param>
+        /// <param name="user">User who wants to go to vip section</param>
         /// <returns>true if can go to vip section, false instead</returns>
-        public bool GoToVipSection(Employee User)
+        public bool GoToVipSection(User user)
         {
-            return  CurrentWeight > 0 && User.IsExecutive;
+            return  CurrentWeight > 0 && user.IsExecutive;
         }
     }
 
-    public class Employee
+    public class User
     {
         public bool IsExecutive { get; set; }
         public int Weight { get; set; }
