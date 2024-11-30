@@ -1,9 +1,8 @@
 https://code.visualstudio.com/docs/csharp/testing
 
-## Build
+## Quick Start
 
-- `dotnet build`
-
-## Test
-
-- `dotnet test`
+```bash
+dotnet build
+dotnet test
+```
