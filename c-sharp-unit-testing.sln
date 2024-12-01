@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elevator", "Elevator\Elevat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elevator.UnitTests", "Elevator.UnitTests\Elevator.UnitTests.csproj", "{B782A881-FB98-48AF-A89E-75CF22FBBF4E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Playwright.Tests", "Playwright.Tests\Playwright.Tests.csproj", "{A2003D61-68BE-4486-81E3-AFB5B6F15001}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,5 +30,9 @@ Global
 		{B782A881-FB98-48AF-A89E-75CF22FBBF4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B782A881-FB98-48AF-A89E-75CF22FBBF4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B782A881-FB98-48AF-A89E-75CF22FBBF4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2003D61-68BE-4486-81E3-AFB5B6F15001}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2003D61-68BE-4486-81E3-AFB5B6F15001}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2003D61-68BE-4486-81E3-AFB5B6F15001}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2003D61-68BE-4486-81E3-AFB5B6F15001}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
